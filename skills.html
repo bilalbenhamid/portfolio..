@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Compétences</title>
+  <style>
+    :root {
+      --background: #000000; /* Fond noir */
+      --foreground: #ffffff; /* Texte blanc */
+      --card: #1a202c; /* Fond de la carte gris foncé */
+      --card-foreground: #ffffff; /* Texte sur la carte blanc */
+      --primary: #fbbf24; /* Jaune pour les éléments principaux */
+      --primary-foreground: #000000; /* Texte noir sur les éléments principaux */
+      --secondary: #2d3748; /* Gris foncé pour les éléments secondaires */
+      --secondary-foreground: #ffffff; /* Texte blanc sur les éléments secondaires */
+      --muted: #2d3748; /* Gris foncé pour les éléments peu mis en avant */
+      --muted-foreground: #fbbf24; /* Texte jaune pour les éléments peu mis en avant */
+      --accent: #fbbf24; /* Jaune pour les éléments d'accentuation */
+      --accent-foreground: #000000; /* Texte noir sur les éléments d'accentuation */
+      --destructive: #e53e3e; /* Rouge pour les éléments destructifs */
+      --destructive-foreground: #ffffff; /* Texte blanc sur les éléments destructifs */
+      --border: #4a5568; /* Gris foncé pour les bordures */
+      --input: #4a5568; /* Gris foncé pour les champs de saisie */
+      --ring: #fbbf24; /* Jaune pour les contours des éléments */
+      --radius: 0.5rem; /* Bordure arrondie */
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+      background-color: var(--card);
+      color: var(--card-foreground);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: auto; /* Centre horizontalement */
+    }
+
+    .title {
+      font-size: 1.875rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 1.125rem;
+      color: var(--secondary-foreground);
+      margin-bottom: 20px;
+    }
+
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+      font-weight: bold;
+      color: var(--muted-foreground); /* Couleur des pourcentages */
+      margin-bottom: 5px;
+    }
+
+    .skill-bar {
+      background-color: var(--muted);
+      border-radius: var(--radius);
+      height: 8px;
+      overflow: hidden;
+    }
+
+    .skill-progress {
+      background-color: var(--accent);
+      height: 100%;
+      border-radius: var(--radius);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      background-color: var(--card); /* Fond de la section footer */
+      padding: 10px;
+    }
+
+    .footer-link {
+      color: var(--primary); /* Couleur des liens */
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Media queries pour rendre le site responsive */
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+      .title {
+        font-size: 1.5rem;
+      }
+      .description {
+        font-size: 1rem;
+      }
+      .skill-header {
+        font-size: 0.875rem;
+      }
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h2 class="title">Mes Compétences</h2>
+      <p class="description">Loin, derrière les montagnes de mots, loin des pays Vokalia et Consonantia</p>
+      
+      <div class="skill">
+        <div class="skill-header">
+          <span>PHP</span>
+          <span>90%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 90%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-header">
+          <span>HTML5</span>
+          <span>95%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 95%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-header">
+          <span>React</span>
+          <span>85%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 85%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-header">
+          <span>CSS3</span>
+          <span>90%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 90%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <a href="index.html" class="footer-link">Accueil</a> |
+      <a href="about.html" class="footer-link">À Propos</a> |
+      <a href="skills.html" class="footer-link">Compétences</a>
+    </footer>
+  </div>
+</body>
+</html>

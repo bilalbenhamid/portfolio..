@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilal Benhamida - Développeur Web Fullstack</title>
+  <style>
+    :root {
+      --background: #000000; /* Fond noir */
+      --foreground: #ffffff; /* Texte blanc */
+      --primary: #f59e0b; /* Jaune pour les boutons */
+      --primary-foreground: #000000; /* Texte noir sur les boutons jaunes */
+      --link: #ffffff; /* Liens blancs */
+      --link-hover: #f59e0b; /* Jaune au survol pour les liens */
+      --radius: 0.5rem; /* Bordure arrondie */
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      display: flex;
+      flex-direction: column; /* Pour les petits écrans */
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      position: relative; /* Assure le bon positionnement des liens de navigation */
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      position: relative; /* Assure le bon positionnement des liens de navigation par rapport au conteneur */
+    }
+
+    .text-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center; /* Centrer le texte sur petits écrans */
+      align-items: center; /* Centrer le contenu pour les petits écrans */
+    }
+
+    h1 {
+      font-size: 1.875rem; /* Taille du texte 3xl */
+      font-weight: bold;
+      color: var(--link);
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 2.25rem; /* Taille du texte 4xl pour petits écrans */
+      font-weight: 800; /* Police très épaisse */
+      color: var(--foreground);
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.25rem; /* Taille du texte xl */
+      color: var(--link);
+      margin: 0;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: bold;
+      color: var(--primary-foreground);
+      background-color: var(--primary);
+      border: 1px solid transparent;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #eab308; /* Jaune légèrement plus foncé */
+    }
+
+    .link {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      color: var(--link);
+      border: 1px solid transparent;
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .link:hover {
+      color: var(--link-hover);
+      border-color: var(--link-hover);
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-container img {
+      border-radius: 50%;
+      width: 6rem; /* Réduire la largeur de l'image pour petits écrans */
+      height: 6rem; /* Réduire la hauteur de l'image pour petits écrans */
+      object-fit: cover;
+    }
+
+    .mt-6 {
+      margin-top: 1.5rem;
+    }
+
+    .mt-8 {
+      margin-top: 2rem;
+    }
+
+    .mt-10 {
+      margin-top: 2.5rem;
+    }
+
+    .ml-4 {
+      margin-left: 1rem;
+    }
+
+    .space-x-4 > * + * {
+      margin-left: 1rem;
+    }
+
+    /* Nouveau CSS pour l'alignement des liens */
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      position: absolute; /* Assurer qu'ils restent en haut */
+      top: 1rem; /* Ajuster la position du haut */
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Media Queries pour rendre le design responsive */
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      .text-section {
+        text-align: left;
+        align-items: flex-start;
+      }
+
+      .image-container img {
+        width: 8rem; /* Largeur de l'image pour les grands écrans */
+        height: 8rem; /* Hauteur de l'image pour les grands écrans */
+      }
+
+      h2 {
+        font-size: 3rem; /* Taille du texte 5xl pour grands écrans */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-links">
+    <a href="index.html" class="link">Accueil</a>
+    <a href="about.html" class="link">À Propos</a>
+    <a href="skills.html" class="link">Compétences</a>
+  </div>
+  <div class="container">
+    <div class="text-section">
+      <h1>BONJOUR !</h1>
+      <h2>Je suis Bilal Benhamida</h2>
+      <p>Développeur Web Fullstack</p>
+      <div class="mt-6 space-x-4">
+        <a href="https://www.sortlist.com/fr/developpement-web/maroc-ma" class="button">EMBAUCHEZ-MOI</a>
+        <a href="marchet_2.mp4" class="button">MES RÉALISATIONS</a>
+      </div>
+    </div>
+    <div class="image-container mt-10">
+      <img src="image.jpeg" alt="Image de Profil">
+    </div>
+  </div>
+</body>
+</html>

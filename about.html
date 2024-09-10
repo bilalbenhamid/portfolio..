@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilal Benhamida - Développeur Web Fullstack</title>
+  
+  <style>
+    :root {
+      --background: #000000; /* Noir pour le fond */
+      --foreground: #ffffff; /* Blanc pour le texte */
+      --primary: #f59e0b; /* Jaune pour les boutons */
+      --primary-foreground: #000000; /* Noir pour le texte des boutons */
+      --link: #ffffff; /* Blanc pour les liens */
+      --link-hover: #f59e0b; /* Jaune pour les liens au survol */
+      --radius: 0.5rem; /* Bordure arrondie */
+      --text-light: #bbb; /* Gris clair pour le texte */
+      --text-medium: #888; /* Gris moyen pour le texte */
+      --card-bg: rgba(0, 0, 0, 0.8); /* Fond semi-transparent pour les cartes */
+      --shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      position: relative;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--background);
+      padding: 1rem;
+      border-bottom: 1px solid var(--text-light);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    .link {
+      color: var(--link);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      transition: color 0.3s ease, background-color 0.3s ease;
+      font-weight: bold;
+    }
+
+    .link:hover {
+      color: var(--link-hover);
+      background-color: rgba(255, 255, 255, 0.1); /* Effet de survol */
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 100%; /* Ajustement à la largeur maximale de l'écran */
+      width: 100%;
+      margin-top: 4rem; /* Réduit la marge supérieure pour ajuster à la navigation */
+      display: flex;
+      flex-direction: column; /* Changer à column pour empiler verticalement sur petits écrans */
+      align-items: center; /* Centrage du contenu */
+      gap: 2rem;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .profile-info img {
+      border-radius: 50%;
+      width: 150px; /* Agrandissement de l'image */
+      height: 150px;
+      object-fit: cover;
+      border: 2px solid var(--primary); /* Bordure autour de l'image */
+      box-shadow: var(--shadow);
+    }
+
+    .text-section {
+      width: 100%; /* Largeur complète pour s'adapter */
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: var(--link);
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--foreground);
+      margin: 0;
+    }
+
+    h4 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin: 0.5rem 0;
+    }
+
+    p {
+      font-size: 1.125rem;
+      color: var(--text-light);
+      margin: 0.5rem 0;
+    }
+
+    .stats {
+      display: flex;
+      flex-direction: column; /* Changer à column pour empiler verticalement sur petits écrans */
+      align-items: center; /* Centrage du contenu */
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .stats span {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--foreground);
+    }
+
+    .stats button {
+      background-color: var(--primary);
+      color: var(--primary-foreground);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      font-weight: bold;
+    }
+
+    .stats button:hover {
+      background-color: #eab308; /* Jaune légèrement plus foncé */
+      transform: scale(1.05); /* Agrandissement léger au survol */
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row; /* Disposition en ligne pour les écrans plus grands */
+        padding: 40px;
+      }
+
+      .profile-info {
+        align-items: flex-start; /* Alignement à gauche */
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="nav-links">
+    <a href="index.html" class="link">Accueil</a>
+    <a href="about.html" class="link">À Propos</a>
+    <a href="skills.html" class="link">Compétences</a>
+  </div>
+  <div class="container">
+    <div class="profile-info">
+      <img src="image.jpeg" alt="Photo de profil">
+      <div>
+        <h2>Bilal Benhamida</h2>
+        <h4>Date de naissance:</h4><p>10 Mars 2001</p>
+        <h4>Adresse:</h4><p>Temara</p>
+        <h4>Code postal:</h4><p>1200</p>
+        <h4>Email: </h4><p>clarkthomp@gmail.com</p>
+        <h4>Téléphone:</h4><p>+212 6-55-02-73-14</p>
+      </div>
+    </div>
+    <div class="text-section">
+      <h1>À Propos de Moi</h1>
+      <p>
+        Je suis un développeur web passionné avec une solide expérience dans le développement fullstack. Maîtrisant des technologies modernes telles que React, Laravel, et Tailwind CSS, j'aime créer des solutions élégantes et fonctionnelles pour des projets variés. Avec une approche axée sur le détail et une compréhension approfondie des besoins des utilisateurs, je m'efforce de livrer des applications web performantes et intuitives. Je suis toujours en quête de nouveaux défis pour continuer à apprendre et à évoluer dans ce domaine dynamique.
+      </p>
+
+      <div class="stats">
+        <span>73 Projets complétés</span>
+        <button>Télécharger CV</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
